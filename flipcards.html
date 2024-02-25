@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipping The Personality</title><link rel="icon" href="https://cdn.iconscout.com/icon/free/png-64/music-1659491-1410013.png">
+    
+    
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+    @import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&family=Young+Serif&display=swap');
+   
+    @import url(https://fonts.googleapis.com/css?family=Orbitron:700); /* stars */
+*{
+  box-sizing: border-box;
+  font-weight: normal;
+ 
+}
+/* navbar */
+*{
+	margin:0px;
+	padding:0px;
+	box-sizing:border-box;
+	}
+	.heading{
+	font-family:'Balsamiq Sans',cursive;
+	}
+	.main{
+	background-color:#0d0d0d;
+	color:white;
+	display:flex;
+	justify-content:space-around;
+	padding:10px;
+	flex-wrap:wrap;
+    border:none;
+    border-radius:12px; 
+    box-shadow: 5px 4px 7px 2px #413f3f;
+	}
+	.linkdiv{
+	display:flex;
+	justify-content:space-around;
+	width:26%;
+	}
+	.links{
+	text-decoration:none;
+	color:#fff;
+	padding-top:9px;
+	}
+	.button{
+	text-decoration:none;
+	border:none;
+	border-radius:14px;
+	color:#ffffff;
+	background-color:#00b386;
+	padding:4px;
+	padding-left:20px;
+	padding-right:20px;
+	}
+	.space{
+	text-decoration:none;
+	border:none;
+	border-radius:14px;
+	color:#ffffff;
+	background-color:#00b386;
+	padding:4px;
+	padding-left:20px;
+	padding-right:20px;
+	margin-left:-106px;
+	}
+    .flip .front {
+            background-size: cover!important;
+            background-position: center!important;
+            background: #313131; /* fallback background color */
+            border-radius: 10px;
+            box-shadow: 5px 4px 7px 2px #413f3f;
+    }
+/* navbar end */
+body {
+  color: #555;
+  background: #222;
+  text-align: center;
+  font-family: 'Roboto Mono';
+  padding: 1em;
+  background-color: rgba(119, 113, 7, 0.036);
+  background-image: url('https://img.freepik.com/free-photo/brown-watercolor-leaf-background-aesthetic-autumn-season_53876-129881.jpg?t=st=1708861489~exp=1708865089~hmac=5e97ceeaedf99e5d52836254bc18ca92fca2d45d9ef4e084f558a82e066d1013&w=996') ;
+    background-size: cover;
+}
+
+h1 {
+  font-size: 2.2em;
+}
+
+/* //base */
+.flip {
+    position: relative;
+    margin-left: 3px;
+    >.front,
+    >.back {
+        display: block;
+        transition-timing-function: cubic-bezier(.175, .885, .32, 1.275);
+        transition-duration: .5s;
+        transition-property: transform, opacity;
+        background-image: url(https://img.freepik.com/free-vector/happy-vesak-day-buddha-purnima-card-background_1035-26891.jpg?t=st=1708857050~exp=1708860650~hmac=64196ae2aa7b108d367884de3d1156ddce0630058ee0be7045fe99efee252fd1&w=900);
+        
+    }
+    >.front {
+        transform: rotateY(0deg);
+        background-image: url(https://img.freepik.com/free-vector/happy-vesak-day-buddha-purnima-card-background_1035-26891.jpg?t=st=1708857050~exp=1708860650~hmac=64196ae2aa7b108d367884de3d1156ddce0630058ee0be7045fe99efee252fd1&w=900);
+    }
+    >.back {
+        position: absolute;
+        opacity: 0;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        transform: rotateY(-180deg);
+        background-image: url(https://img.freepik.com/free-vector/happy-vesak-day-buddha-purnima-card-background_1035-26891.jpg?t=st=1708857050~exp=1708860650~hmac=64196ae2aa7b108d367884de3d1156ddce0630058ee0be7045fe99efee252fd1&w=900);
+    }
+    &:hover {
+        >.front {
+            transform: rotateY(180deg)
+            
+        }
+        >.back {
+            opacity: 1;
+            transform: rotateY(0deg);
+        }
+    }
+    &.flip-vertical {
+        >.back {
+            transform: rotateX(-180deg);
+        }
+        &:hover {
+            >.front {
+                transform: rotateX(180deg);
+            }
+            >.back {
+                transform: rotateX(0deg);
+            }
+        }
+    }
+}
+.flip {
+    background-size: cover!important;
+    background-position: center!important;
+    background: #313131; /* fallback background color */
+    background-image: url(https://img.freepik.com/free-vector/buddha-flat-illustration_1284-16469.jpg?t=st=1708857904~exp=1708861504~hmac=f61282a1ce9c4acc75f84fa7eac0ec7a106504d942fcb0ff4b5a629baa4b893e&w=740); /* specify your background image */
+    border-radius: 10px;
+    box-shadow: 5px 4px 7px 2px #413f3f;
+}
+
+
+/* // custom */
+.flip {
+    position: relative;
+    display: inline-block;
+    margin-right: 2px;
+    margin-bottom: 1em; 
+    width: 400px;
+    >.front,
+    >.back {
+      display: block;
+      color: white;
+      width: inherit;
+      background-size: cover!important;
+      background-position: center!important;
+      height: 220px;
+      padding: 2em 2em;
+      background: #313131;
+      border-radius: 10px;
+      box-shadow: 5px 4px 7px 2px #413f3f;          
+      p {
+        font-size: 0.9125rem;
+        line-height: 160%;
+        color: #999;
+        
+      }
+    }
+}
+
+.ft{
+    font-family: 'Ubuntu', sans-serif;
+    /* font-family: 'Young Serif', serif; */
+}
+
+.fnt{
+    font-family: 'Young Serif', serif;
+}
+
+.box{
+    display:flex;
+	justify-content:space-evenly;
+	padding:10px;
+	flex-wrap:wrap;
+    /*background-image: url(https://img.freepik.com/free-vector/happy-vesak-day-buddha-purnima-card-background_1035-26891.jpg?t=st=1708857050~exp=1708860650~hmac=64196ae2aa7b108d367884de3d1156ddce0630058ee0be7045fe99efee252fd1&w=900);
+*/}
+/* .bg{
+    background-image: url('images/bg2.jpg');
+} */
+.text-shadow {
+text-shadow: 1px 1px rgba(0, 0, 0, 0.04), 2px 2px rgba(0, 0, 0, 0.04), 3px 3px rgba(0, 0, 0, 0.04), 4px 4px rgba(0, 0, 0, 0.04), 0.125rem 0.125rem rgba(0, 0, 0, 0.04), 6px 6px rgba(0, 0, 0, 0.04), 7px 7px rgba(0, 0, 0, 0.04), 8px 8px rgba(0, 0, 0, 0.04), 9px 9px rgba(0, 0, 0, 0.04), 0.3125rem 0.3125rem rgba(0, 0, 0, 0.04), 11px 11px rgba(0, 0, 0, 0.04), 12px 12px rgba(0, 0, 0, 0.04), 13px 13px rgba(0, 0, 0, 0.04), 14px 14px rgba(0, 0, 0, 0.04), 0.625rem 0.625rem rgba(0, 0, 0, 0.04), 16px 16px rgba(0, 0, 0, 0.04), 17px 17px rgba(0, 0, 0, 0.04), 18px 18px rgba(0, 0, 0, 0.04), 19px 19px rgba(0, 0, 0, 0.04), 1.25rem 1.25rem rgba(0, 0, 0, 0.04);
+font-family: 'Young Serif', serif;
+}
+.flip{
+    background-image: url(https://img.freepik.com/free-vector/happy-vesak-day-buddha-purnima-card-background_1035-26891.jpg?t=st=1708857050~exp=1708860650~hmac=64196ae2aa7b108d367884de3d1156ddce0630058ee0be7045fe99efee252fd1&w=900);
+}
+.back{
+    background-image: url(https://img.freepik.com/free-vector/happy-vesak-day-buddha-purnima-card-background_1035-26891.jpg?t=st=1708857050~exp=1708860650~hmac=64196ae2aa7b108d367884de3d1156ddce0630058ee0be7045fe99efee252fd1&w=900);
+}
+
+/* stars */
+
+    </style>
+</head>
+<body>
+    
+    <div class="bg">
+        
+
+
+        <div class="main">
+            <div class="logo">
+                <h3 class="heading">Flipping The Personality</h3>
+            </div>
+            <div class="linkdiv">
+                <div><a href="#" class="links">Services</a></div>
+                <div><a href="#" class="links">Projects</a></div>
+                <div><a href="#" class="links">About</a></div>
+            </div>
+            <div><a href="#" class="button">Contact</a></div>
+        </div>
+    
+        <!-- </div> -->
+
+        <br><br>
+    
+        <!-- <h4>Personality Numbers</h4> -->
+        <!-- <div class="flipcard"> -->
+        <div class="box">
+            <div class="flip">
+                <div class="front" style="background-image: url(https://img.freepik.com/free-photo/buddhist-meditates-by-lotus-pond-tranquil-harmony-generative-ai_188544-12696.jpg?t=st=1708860784~exp=1708864384~hmac=86bebe796f7935a646ad6c5196d397a134cb573ebab4e1c65a9c1dcb1d88fee5&w=900);" >
+                   <h1 class="text-shadow">Personality no. 1</hi>
+                </div>
+                 <div class="back" style="background-image: url(https://img.freepik.com/free-photo/candles-near-bottle-ingredients-parchment_23-2147777442.jpg?t=st=1708861852~exp=1708865452~hmac=2cf4c7b6aebdb405e69e1f128f102948598b58a3ba4dd7f877c06ecea069be12&w=740);">
+                    <h3 class="fnt" style="text-decoration: underline ;">Personality No.1</h3>
+                    <br>
+                    <p class="ft" style="font-weight: bold; color: antiquewhite;">You are an independent and original thinker. You are not afraid to speak your mind and are always up for a challenge. You like to do things your way and are not afraid to take risks. You are a natural leader, and people are drawn to your confid</p>
+                </div>
+            </div>
+    
+            <div class="flip">
+                <div class="front" style="background-image: url(https://img.freepik.com/free-photo/person-practicing-yoga-meditation-outdoors-nature_23-2150838447.jpg?t=st=1708860667~exp=1708864267~hmac=f39466f0b70090a94b530997ce9e1402466076020840b6d7d4446d0a2a83b3c2&w=900);" >
+                      <h1 class="text-shadow">Personality no. 2</hi>
+                </div>
+                <div class="back" style="background-image: url(https://img.freepik.com/free-photo/candles-near-bottle-ingredients-parchment_23-2147777442.jpg?t=st=1708861852~exp=1708865452~hmac=2cf4c7b6aebdb405e69e1f128f102948598b58a3ba4dd7f877c06ecea069be12&w=740);">
+                    <h3 class="fnt" style="text-decoration: underline ;">Personality No.2</h3>
+                    <br>
+                    <p class="ft" style="font-weight: bold; color: antiquewhite;">You are cooperative, considerate and always think of others before yourself and are always willing to lend a helping hand. You believe there is strength in numbers and work well in teams. You are gentle and compassionate. People feel safe around you.</p>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+
+
+        <div class="box">
+            <div class="flip">
+                <div class="front" style="background-image: url(https://img.freepik.com/free-photo/western-woman-standing-cultural-architecture-udaipur-india_53876-65363.jpg?t=st=1708860069~exp=1708863669~hmac=946b31b2ffd2515c70d8f0a08f59270deba9974820798ca6128663eeff0a74ee&w=900)">
+                    <h1 class="text-shadow">Personality no. 3</hi>
+                </div>
+                <div class="back" style="background-image: url(https://img.freepik.com/free-photo/candles-near-bottle-ingredients-parchment_23-2147777442.jpg?t=st=1708861852~exp=1708865452~hmac=2cf4c7b6aebdb405e69e1f128f102948598b58a3ba4dd7f877c06ecea069be12&w=740);">
+                    <h3 class="fnt" style="text-decoration: underline ;">Personality No. 3</h3>
+                    <br>
+                    <p class="ft" style="font-weight: bold; color: antiquewhite;">You are creative and expressive. You have a knack for art and self-expression and enjoy being the centre of attention. You are fun-loving and carefree, and people enjoy being around you. You have a strong imagination and often see things that others do not. </p>
+                </div>
+            </div>
+    
+            <div class="flip">
+                <div class="front" style="background-image: url(https://img.freepik.com/free-photo/portrait-indian-people-celebrating-baisakhi-festival_23-2151216925.jpg?t=st=1708859937~exp=1708863537~hmac=9418d70b73482add502bd83419ef70fa887a38a3fc74fd596ec4d8fb231c7c13&w=900);">
+                    <h1 class="text-shadow">Personality no. 4</hi>
+                </div>
+                <div class="back" style="background-image: url(https://img.freepik.com/free-photo/candles-near-bottle-ingredients-parchment_23-2147777442.jpg?t=st=1708861852~exp=1708865452~hmac=2cf4c7b6aebdb405e69e1f128f102948598b58a3ba4dd7f877c06ecea069be12&w=740);">
+                    <h3 class="fnt" style="text-decoration: underline ;">Personality No.4</h3>
+                    <br>
+                    <p class="ft" style="font-weight: bold; color: antiquewhite;">You are a logical, analytical thinker and like to take your time to process information. You prefer sticking to facts rather than emotions. You want things to be organised and orderly. You like planning before actioning. You appear reliable and trustworthy.</p>
+                </div>
+            </div>
+        </div>
+
+        <br><br>
+        
+
+
+
+        <div class="box">
+            <div class="flip">
+                <div class="front" style="background-image:url(https://img.freepik.com/free-photo/meditating-buddha-statue-tranquil-forest-setting-generated-by-ai_188544-20775.jpg?t=st=1708858663~exp=1708862263~hmac=f07b2bb873fefa4e8cf1908cc36569c1c732dc73d54cc0e19cbf3290d3d50c05&w=900)" >
+                    <h1 class="text-shadow">Personality no. 5</hi>
+                </div>
+                <div class="back" style="background-image: url(https://img.freepik.com/free-photo/candles-near-bottle-ingredients-parchment_23-2147777442.jpg?t=st=1708861852~exp=1708865452~hmac=2cf4c7b6aebdb405e69e1f128f102948598b58a3ba4dd7f877c06ecea069be12&w=740);">
+                    <h3 class="fnt" style="text-decoration: underline ;">Personality No. 5</h3>
+                    <br>
+                    <p class="ft" style="font-weight: bold; color: antiquewhite;">You are flexible and adaptable. You thrive in changeable environments, and you like variety in your life. You hate routine, and you get bored quickly. People see you as spontaneous and exciting.</p>
+                </div>
+            </div>
+    
+            <div class="flip">
+                <div class="front" style="background-image: url(https://img.freepik.com/premium-photo/women-asians-travel-relax-holiday-photograph-landscape-moutain-thailand_36074-682.jpg?w=900);" >
+                    <h1 class="text-shadow">Personality no. 6</hi>
+                </div>
+                <div class="back" style="background-image: url(https://img.freepik.com/free-photo/candles-near-bottle-ingredients-parchment_23-2147777442.jpg?t=st=1708861852~exp=1708865452~hmac=2cf4c7b6aebdb405e69e1f128f102948598b58a3ba4dd7f877c06ecea069be12&w=740);">
+                    <h3 class="fnt" style="text-decoration: underline ;">Personality No. 6</h3>
+                    <br>
+                    <p class="ft" style="font-weight: bold; color: antiquewhite;">You are a compassionate, caring person and have a strong sense of justice & always stand up for the underdog. You believe in the goodness of people, and always look for the best in them. You have a lot of love to give, and people can count on you.</p>
+                </div>
+            </div>
+        </div>
+
+        <br><br>
+        
+
+        <div class="box">
+            <div class="flip">
+                <div class="front" style="background-image: url(https://img.freepik.com/free-photo/one-person-meditating-finding-spirituality-serene-mountain-landscape-generated-by-artificial-intelligence_188544-130524.jpg?t=st=1708860414~exp=1708864014~hmac=98d0dec8a1b57161836cbc352414fc2dbf29561cc6bb0b19626163b7cbde8207&w=900);" >
+                    <h1 class="text-shadow">Personality no. 7</hi>
+                </div>
+                <div class="back" style="background-image: url(https://img.freepik.com/free-photo/candles-near-bottle-ingredients-parchment_23-2147777442.jpg?t=st=1708861852~exp=1708865452~hmac=2cf4c7b6aebdb405e69e1f128f102948598b58a3ba4dd7f877c06ecea069be12&w=740);">
+                    <h3 class="fnt" style="text-decoration: underline ;">Personality No. 7</h3>
+                    <br>
+                    <p class="ft" style="font-weight: bold; color: antiquewhite;">You tend to appear more secretive, introverted, even mysterious and different. You seem so withdrawn. You have a serious, independent and intelligent aura, and others are likely to trust and respect you. Be wary of appearing too opinionated and arrogant.</p>
+                </div>
+            </div>
+    
+            <div class="flip">
+                <div class="front" style="background-image: url(https://img.freepik.com/free-photo/asian-woman-wearing-japanese-traditional-kimono-yasaka-pagoda-sannen-zaka-street-kyoto-japan_335224-40.jpg?t=st=1708860323~exp=1708863923~hmac=c15269b0a3ed51a67528237dfa8cacc7bd5d8056ef33ea58f35f07c3cc2147c5&w=900);" >
+                    <h1 class="text-shadow" >Personality no. 8</hi>
+                </div>
+                <div class="back" style="background-image: url(https://img.freepik.com/free-photo/candles-near-bottle-ingredients-parchment_23-2147777442.jpg?t=st=1708861852~exp=1708865452~hmac=2cf4c7b6aebdb405e69e1f128f102948598b58a3ba4dd7f877c06ecea069be12&w=740);">
+                    <h3 class="fnt" style="text-decoration: underline ;">Personality No. 8</h3>
+                    <br>
+                    <p class="ft" style="font-weight: bold; color: antiquewhite;">You are often seen as strong, ambitious, competitive, competent, and confident. You can project an aura of authority and power, and people see you with good decision making abilities and business sense. Be wary of appearing too egocentric and greedy.</p>
+                </div>
+            </div>
+        </div>
+
+        <br><br>
+        
+        
+        <!-- </div> -->
+  
+        <!-- end -->
+    
+
+        <div>
+            <div class="flip">
+                <div class="front" style="background-image: url(https://img.freepik.com/premium-photo/low-angle-view-historical-building_1048944-22640516.jpg?w=360)">
+                    <h1 class="text-shadow" >Personality no. 9</hi>
+                </div>
+                <div class="back" style="background-image: url(https://img.freepik.com/free-photo/candles-near-bottle-ingredients-parchment_23-2147777442.jpg?t=st=1708861852~exp=1708865452~hmac=2cf4c7b6aebdb405e69e1f128f102948598b58a3ba4dd7f877c06ecea069be12&w=740);">
+                    <h3 class="fnt" style="text-decoration: underline ;">Personality No. 9</h3>
+                    <br>
+                    <p class="ft" style="font-weight: bold; color: antiquewhite;">You reflect a charismatic and somewhat aristocratic appearance. People see you as being in control, with positive and idealistic opinions and ideas. You can inspire and influence those around you. Be wary of seeming arrogant and above others</p>
+                </div>
+            </div>
+        </div>
+
+        
+
+    </div>
+
+
+</body>
+</html>
